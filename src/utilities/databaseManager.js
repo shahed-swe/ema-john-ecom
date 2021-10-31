@@ -1,7 +1,7 @@
 const getUser = () => {
     const existingUser = sessionStorage.getItem('userId');
     if (existingUser) {
-        return existingUser;
+        return existingUser; 
     } else {
         const newUser = 'user-' + new Date().getTime();
         sessionStorage.setItem('userId', newUser)
@@ -44,32 +44,32 @@ export { addToDatabaseCart, getDatabaseCart, removeFromDatabaseCart, processOrde
 
 // polyfill to support older browser
 const localStorage = window.localStorage || (() => {
-    let store = {}
-    return {
-        getItem(key) {
-            return store[key]
-        },
-        setItem(key, value) {
-            store[key] = value.toString()
-        },
-        clear() {
-            store = {}
-        }
-    };
+  let store = {}
+  return {
+    getItem(key) {
+      return store[key]
+    },
+    setItem(key, value) {
+      store[key] = value.toString()
+    },
+    clear() {
+      store = {}
+    }
+  };
 })()
 
 const sessionStorage = window.sessionStorage || (() => {
-        let store = {}
-        return {
-            getItem(key) {
-                return store[key]
-            },
-            setItem(key, value) {
-                store[key] = value.toString()
-            },
-            clear() {
-                store = {}
-            }
-        };
-    })()
-    // end of poly fill
+  let store = {}
+  return {
+    getItem(key) {
+      return store[key]
+    },
+    setItem(key, value) {
+      store[key] = value.toString()
+    },
+    clear() {
+      store = {}
+    }
+  };
+})()
+// end of poly fill

@@ -1,0 +1,15 @@
+.shop-container {
+	display: flex;
+}
+
+.product-container {
+	width: 70%;
+	margin-right: 5px;
+	margin-left: 20px;
+	border-right: 1px solid lightgray;
+}
+
+.product-search {
+	padding: 2px 5px;
+	margin-top: 5px;
+}
